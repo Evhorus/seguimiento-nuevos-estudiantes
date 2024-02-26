@@ -13,9 +13,9 @@ function App() {
   }, [estudiantes]);
 
   const eliminarEstudiante = (id) => {
-    const estudiantesActualizados = estudiantes.filter((estudiante) => {
-      estudiante.id !== id;
-    });
+    const estudiantesActualizados = estudiantes.filter(
+      (estudiante) => estudiante.id !== id
+    );
     setEstudiantes(estudiantesActualizados);
   };
   return (
