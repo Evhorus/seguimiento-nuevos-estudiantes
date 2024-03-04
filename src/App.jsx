@@ -34,8 +34,8 @@ function App() {
           eliminarEstudiante={eliminarEstudiante}
         />
       </div>
-      <h2 className="font-bold text-center">
-        ® Hecho Por <span>Sebastian Velasco Gonzalez</span> ®
+      <h2 className="text-center">
+        <h1>© 2023 - Sebastian Velasco Gonzalez</h1>
       </h2>
     </div>
   );

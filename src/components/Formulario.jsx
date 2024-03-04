@@ -79,11 +79,13 @@ const Formulario = ({
       </h2>
       <p className="sm:text-lg mt-5 text-center mb-10">
         Añadir Estudiantes y {""}
-        <span className="text-violet-500 font-bold text-lg">Administralos</span>
+        <span className="text-violet-500 font-bold text-lg">
+          Administrarlos
+        </span>
       </p>
       {error && (
         <Error>
-          <p>Todos los campos son obligatorios</p>
+          <p>Todos los campos son obligatorios.</p>
         </Error>
       )}
       <form
