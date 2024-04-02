@@ -10,7 +10,7 @@ function App() {
         <h1 className="font-black text-5xl text-center md:w-2/3 md:mx-auto">
           Nuevos <span className="text-indigo-700">Estudiantes</span>
         </h1>
-        <div className="mt-12 md:flex">
+        <div className="mt-12 md:flex" id="form">
           <StudentForm />
           <StudentsList />
         </div>

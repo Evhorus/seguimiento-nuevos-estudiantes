@@ -30,6 +30,7 @@ export const useStudentStore = create<StudentState>()(
         deleteStudent: (id) => {
           set((state) => ({
             students: state.students.filter((student) => student.id !== id),
+            activeId: "",
           }));
         },
         getStudentById: (id) => {

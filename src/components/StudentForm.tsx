@@ -18,6 +18,8 @@ export default function StudentForm() {
     reset,
   } = useForm<DraftStudent>();
 
+  console.log(activeId);
+
   useEffect(() => {
     if (activeId) {
       const activeStudent = students.filter(
@@ -29,8 +31,11 @@ export default function StudentForm() {
       setValue("emailContact", activeStudent.emailContact);
       setValue("date", activeStudent.date);
       setValue("observations", activeStudent.observations);
+    } else {
+      reset();
     }
-  }, [activeId, students, setValue]);
+  }, [activeId, students, setValue, reset]);
+
   const registerStudent = (data: DraftStudent) => {
     if (activeId) {
       updateStudent(data);
@@ -41,7 +46,7 @@ export default function StudentForm() {
     }
     reset();
   };
-
+  console.log(activeId);
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
       <h2 className="font-black text-3xl text-center">

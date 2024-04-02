@@ -15,6 +15,14 @@ export default function StudentDetails({ student }: StudentDetailsProps) {
     deleteStudent(student.id);
     toast.error("Estudiante Eliminado Correctamente");
   };
+
+  const handleEdit = () => {
+    getStudentById(student.id);
+    const formElement = document.getElementById("form");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <div className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl">
       <StudentDetailItem label="ID" data={student.id} />
@@ -32,7 +40,7 @@ export default function StudentDetails({ student }: StudentDetailsProps) {
         <button
           type="button"
           className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg"
-          onClick={() => getStudentById(student.id)}
+          onClick={handleEdit}
         >
           Editar
         </button>
